@@ -2,7 +2,6 @@
 
 import useStudents from '@/hooks/useStudents';
 import type StudentInterface from '@/types/StudentInteface';
-import styles from './Students.module.scss';
 
 const Students = (): React.ReactElement => {
   const { students, isLoading, error } = useStudents();
@@ -12,10 +11,10 @@ const Students = (): React.ReactElement => {
   if (!students || students.length === 0) return <div>Студенты не найдены</div>;
 
   return (
-    <div className={styles.Students}>
+    <div>
       <h1>Список студентов</h1>
       {students.map((student: StudentInterface) => (
-        <div key={student.id} className={styles.student}>
+        <div key={student.id}>
           <h3>{student.first_name} {student.last_name}</h3>
           <p>Группа: {student.groupId}</p>
         </div>
