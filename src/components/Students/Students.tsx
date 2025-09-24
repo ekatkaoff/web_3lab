@@ -2,7 +2,7 @@
 
 import useStudents from '@/hooks/useStudents';
 import type StudentInterface from '@/types/StudentInteface';
-import styles from '@/Groups/Groups.module.scss';
+import styles from './Students.module.scss';
 
 const Students = (): React.ReactElement => {
   const { students, isLoading, error } = useStudents();
