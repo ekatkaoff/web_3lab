@@ -1,29 +1,24 @@
+'use client';
+
+import useStudents from '@/hooks/useStudents';
 import type StudentInterface from '@/types/StudentInterface';
-import styles from './Student.module.scss';
 
-interface Props {
-  student: StudentInterface;
-  onDelete: (id: number) => void;
-}
+const Students = (): React.ReactElement => {
+  const { students } = useStudents();
 
-const Student = ({ student, onDelete }: Props): React.ReactElement => {
-  const onDeleteHandler = (): void => {
-    onDelete(student.id);
-  };
+  if (!students || students.length === 0) return <div>Студенты не найдены</div>;
 
   return (
-    <div className={`${styles.Student} ${student.isDeleted ? styles['--isDeleted'] : '' }`}>
-      {student.id}
-      {' - '}
-      {student.last_name}
-      {' '}
-      {student.first_name}
-      {' '}
-      {student.middle_name}
-      {' '}
-      <button onClick={onDeleteHandler}>Удалить</button>
+    <div>
+      <h1>Список студентов</h1>
+      {students.map((student: StudentInterface) => (
+        <div key={student.id}>
+          <h3>{student.first_name} {student.last_name}</h3>
+          <p>Группа: {student.groupId}</p>
+        </div>
+      ))}
     </div>
   );
 };
 
-export default Student;
+export default Students;
