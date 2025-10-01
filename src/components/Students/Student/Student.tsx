@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Student.module.css';
+import styles from './Student.module.scss';
 import type StudentInterface from '@/types/StudentInterface';
 
 interface StudentProps {
