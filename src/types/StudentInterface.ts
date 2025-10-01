@@ -4,6 +4,7 @@ interface StudentInterface {
   last_name: string;
   middle_name: string;
   groupId: number;
+  isDeleted?: boolean; // Для оптимистичной мутации в useStudents
 }
 
-export default StudentInterface
+export default StudentInterface;

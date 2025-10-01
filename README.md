@@ -79,6 +79,12 @@ http://localhost:3000/api/groups - апи
 ![sql2](docs/pics/sql2.png)
 ![sql3](docs/pics/sql3.png)
 
+## Git
+```
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+
 ## Ссылки
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
