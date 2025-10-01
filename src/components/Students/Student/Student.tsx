@@ -11,7 +11,7 @@ const Student: React.FC<StudentProps> = ({ student, onDelete }) => {
   return (
     <div className={styles.student}>
       <h3>
-        {student.first_name} {student.last_name} {student.middle_name || ''}
+        {student.firstName} {student.lastName} {student.middleName || ''}
       </h3>
       <p>Группа: {student.groupId}</p>
       <button onClick={() => onDelete(student.id)}>Удалить</button>
