@@ -20,15 +20,5 @@ export const getGroupsDb = async (): Promise<GroupInterface[]> => {
     });
   });
 
-  // test data
-  // const groups: GroupInterface[] = [
-  //   {
-  //     name: '2207 д2',
-  //   },
-  //   {
-  //     name: '2207 д2',
-  //   },
-  // ];
-
   return groups as GroupInterface[];
 };
